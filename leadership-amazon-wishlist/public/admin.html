@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Order Requests</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <nav>
+    <a href="/" class="logo">Club Orders</a>
+    <a href="/">All Requests</a>
+    <a href="/create.html">New Request</a>
+    <a href="/admin.html" class="active">Admin</a>
+  </nav>
+
+  <div class="container">
+    <h1>Admin Panel</h1>
+
+    <div class="controls">
+      <div>
+        <label for="status-filter">Filter by Status</label>
+        <select id="status-filter">
+          <option value="">All</option>
+          <option value="pending" selected>Pending</option>
+          <option value="confirmed">Confirmed</option>
+          <option value="rejected">Rejected</option>
+        </select>
+      </div>
+      <div>
+        <label for="club-filter">Filter by Club</label>
+        <select id="club-filter">
+          <option value="">All Clubs</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="admin-list">
+      <div class="loading-container"><div class="spinner"></div></div>
+    </div>
+  </div>
+
+  <script src="/js/admin.js"></script>
+</body>
+</html>
